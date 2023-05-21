@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>FIB studio</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="icon" type="image/ico" href="images/favicon-32.png">
+        
+        <!--Responsive website -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- This is how we link to an external css file -->
+        
+        <!--EXTERNAL CSS -->
+        <link rel="stylesheet" href="css/reset.css">
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Mallanna&family=Oswald&display=swap" rel="stylesheet">
+
+        <!-- Google Icons -->
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+        <!--Style with CSS -->
+        <link rel="stylesheet" href="css/style.css">          
+                        
+    </head>
+    
+    <body id="pageTop">
+
+        <section class="navigation" id="barMenu">            
+            
+            <img src="images/yellowLogo.svg" alt="yellow logo" class="logo">
+
+            <nav class="barNav" id="barNav">                      
+                <ul class="mobileMenu">
+                    <li><img src="images/cyanLogo.svg" alt="cyan logo" class="brand"></li>
+                    
+                    <li><a class="fancy-link" href="#section1">About us</a></li>
+                    <li><a class="fancy-link" href="#section2">Service/Process</a></li>
+                    <li><a class="fancy-link" href="#section3">Projects</a></li>                    
+                    <li><a class="fancy-link" href="#section5">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <button class="toggle-btn" onclick="myFunction()">
+                <i class="fa-solid fa-bars" id="bars"></i>
+                <i class="fa-solid fa-xmark" id="xmark"></i>
+            </button>
+
+        </section>
+        
+        <header>
+            <ul class="hero">
+                <li class="slideLeft"><div class="angled"><div class="flat">impactful</div></div> websites</li>
+                <li class="slideLeft">for <div class="angled"><div class="flat">brilliant</div></div> ideas</li>
+            </ul>
+            <button class="open">Get in touch</button>
+            <!-- Look at section 4 to visualize Get in Touch Form-->
+            
+        </header>
+
+        <!-- *********************************************************************************************************************** --> 
+
+        <section id="section1">
+            <section class="description">
+                <div class="angled">
+                    <div class="flat">
+                        <h2>About us</h2>
+                        <p>At FIB studio, <span class="keyWord">innovation</span> and <span class="keyWord">creativity</span> go hand in hand to achieve your business goals through <span class="keyWord">custom</span> websites.</p>
+                    </div>
+                </div>             
+            </section>
+
+            <section>
+                <span class="material-icons">lightbulb</span>
+                <span class="material-icons">psychology</span>
+                <span class="material-icons">view_quilt</span>
+                <span class="material-icons">diversity_2</span>        
+            </section>          
+        </section>
+        <!-- *********************************************************************************************************************** -->    
+
+        <section id="section2">
+            <section class="description">
+                <div class="angled">
+                    <div class="flat">
+                        <h2>Services</h2>
+                        <p>FIB Studio designs and develops either custom websites or through Boostrap framework, both English and Spanish.</p>
+                        <br>
+                        <p><span class="keyWord">Process</span></p>
+                        <ul>
+                            <li>Register Get in Touch form (client).</li>
+                            <li>Register form which FIB Studio will email, this is about specific type of website choosen previously in Get in Tocuh form (client).</li>
+                            <li>Meet with client by videoconference to set final details.</li>                            
+                            <li>Email visual design after receiving advance payment made by client.</li>
+                            <li>Make modifications to visual design if client considers necessary.</li>
+                            <li>Get visual design aproved by client.</li>
+                            <li>Build website after receiving final payment by client.</li>
+                            <li>Host the website.</li>   
+                            <li>Get website aproved by client.</li>      
+                            <li>Close the deal with client.</li>                         
+                        </ul>
+
+                    </div>
+                </div>             
+            </section>           
+
+            <dl>                               
+                <dt class="angledWord"><div class="flat"><i class="fa-solid fa-user-tie"></i>personal website.</div></dt>
+                <dd>Establishing your brand</dd> 
+                
+                <dt class="angledWord"><div class="flat"><i class="fa-solid fa-user-doctor"></i>portfolio website.</div></dt>
+                <dd>Attracting more clients</dd>
+                
+                <dt class="angledWord"><div class="flat"><i class="fa-solid fa-briefcase"></i>business website.</div></dt>
+                <dd>Having online presence</dd>
+                
+                <dt class="angledWord"><div class="flat"><i class="fa-solid fa-users-viewfinder"></i>blog website.</div></dt>
+                <dd>Keeping in contact with your audience</dd>
+            </dl>
+            
+        </section>        
+            
+        <!-- ************************************************************************************************************************** -->
+        <section id="section3">
+
+            <div class="angled">
+                <h2 class="flat">Projects</h2>
+            </div>             
+
+            <section class="carousel">
+                <button class="carouselBtn leftBtn isHidden">                    
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+                
+                <div class="carouselContainer">
+                    <ul class="carouselItems">
+                        <li class="carouselSlide currentSlide">
+                            <h2>Mindfulpedia</h2>
+                            <img src="images/01.jpg" alt="image description">
+                            <p><a href="https://fernandaib.github.io/mindfulpedia/" target="_blank">Learn more</a></p>                            
+                        </li>
+                        <li class="carouselSlide">
+                            <h2>Save a Shark</h2>
+                            <img src="images/02.jpg" alt="image description">
+                            <p><a href="https://fernandaib.github.io/saveashark/" target="_blank">Learn more</a></p>  
+                        </li>
+                        <li class="carouselSlide">
+                            <h2>Forest Animals</h2>
+                            <img src="images/03.jpg" alt="image description">
+                            <p><a href="https://fernandaib.github.io/forestanimals/" target="_blank">Learn more</a></p>
+                        </li>                        
+                    </ul>
+                </div>
+                <button class="carouselBtn rightBtn">                    
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+
+                <nav class="carouselNav">
+                    <button class="carouselIndicator currentSlide"></button>
+                    <button class="carouselIndicator"></button>
+                    <button class="carouselIndicator"></button>                    
+                </nav>
+            </section>          
+        </section> 
+        <!-- ************************************************************************************************************************** -->
+        <!-- Form -->
+                     
+        <section id="section4" class="modalOverlay isClosed">    
+            <div class="modal">
+                <form action="#" method="post" id="contact">
+                    <fieldset>                    
+                        <legend class="angled">
+                            <h2 class="flat">Get in touch</h2>                                
+                        </legend>
+                        <p>Reach out to us</p>
+    
+                        <label for="fullName">Your Name:</label>
+                        <input type="text" id="fullName" name="full_name">
+    
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+    
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone">                                    
+    
+                        <div class="radioBtns">
+                            <p>Preferred method of contact:</p>
+                            <label for="contactEmail">
+                                <input type="radio" id="contactEmail" value="email" name="contactPreference"><span></span>Email
+                            </label>
+                            <label for="contactMsg">
+                                <input type="radio" id="contactMsg" value="text" name="contactPreference"><span></span>Message
+                            </label>
+                        </div>   
+                               
+                        <div class="radioBtns">
+                            <p class="explanation">Type of website. Learn more in <a href="#section2" target="_blank">Services</a></p>
+                            <label for="personalWeb">
+                                <input type="radio" id="personalWeb" value="text" name="typeWeb"><span></span>Personal
+                            </label>
+                            <label for="businessWeb">
+                                <input type="radio" id="businessWeb" value="text" name="typeWeb"><span></span>Business
+                            </label>
+                            <label for="portfolioWeb">
+                                <input type="radio" id="portfolioWeb" value="text" name="typeWeb"><span></span>Portfolio
+                            </label>
+                            <label for="blogWeb">
+                                <input type="radio" id="blogWeb" value="text" name="typeWeb"><span></span>Blog
+                            </label>
+                        </div>
+    
+                        <div class="radioBtns">
+                            <p>Language</p>
+                            <label for="englishLang">
+                                <input type="radio" id="englishLang" value="text" name="typeLang"><span></span>English                           
+                            </label>
+                            <label for="spanishLang">
+                                <input type="radio" id="spanishLang" value="text" name="typeLang"><span></span>Spanish
+                            </label>
+                            <label for="bothLang">
+                                <input type="radio" id="bothLang" value="text" name="typeLang"><span></span>Both
+                            </label>                        
+                        </div>
+    
+                        <label for="msg">Your Message:</label>
+                        <textarea name="message" id="msg"></textarea>
+                        
+                        
+                        <div class="checks">
+                            <input type="checkbox" id="copyEmail" name="copyEmail">
+                            <span></span>
+                            <label for="copyEmail">Send a copy to my email</label>
+                        </div> 
+                        
+                        <div id="btnSend">
+                            <input type="submit" id="submit" value="Send">
+                            
+                        </div>
+                    </fieldset>                        
+                </form>
+                <button class="close">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </button> 
+            </div>                     
+        </section>
+        <!-- ************************************************************************************************************************** -->
+
+        <section id="section5">
+            <div class="angled">
+                <h2 class="flat">Frequently Asked Questions</h2>
+            </div>           
+
+            <section class="aContainer">
+                <div class="accordion">
+                    <header class="aHeader">
+                        <h3><button class="question">Why should I have a website, if social media exist?
+                            <i class="fa-solid fa-plus icon"></i>
+                            <i class="fa-solid fa-minus icon"></i>
+                            </button>
+                        </h3>
+                    </header>
+                    <article class="aContent">
+                        <div class="aInner">
+                            <p>Because through a website, an organization is able to communicate credibility. In addition, an organization needs digital presence itself and not depends of other companies. Social Media are a marketing tool which reinforce digital presence</p>
+                            
+                            
+                        </div>
+                    </article>
+                </div>
+                <div class="accordion">
+                    <header class="aHeader">
+                        <h3><button class="question">Does FIB Studio build e-commerce platforms?
+                            <i class="fa-solid fa-plus icon"></i>
+                            <i class="fa-solid fa-minus icon"></i>
+                            </button>
+                        </h3>
+                    </header>
+                    <article class="aContent">
+                        <div class="aInner">
+                            <p>No, at this moment FIB Studio doesn't.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="accordion">
+                    <header class="aHeader">
+                        <h3><button class="question">Does FIB Studio offer Back-End development?
+                            <i class="fa-solid fa-plus icon"></i>
+                            <i class="fa-solid fa-minus icon"></i>
+                            </button>
+                        </h3>
+                    </header>
+                    <article class="aContent">
+                        <div class="aInner">
+                            <p>No, at this moment FIB studio doesn't. FIB Studio focus in Front-End development.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="accordion">
+                    <header class="aHeader">
+                        <h3><button class="question">How much time does FIB Studio take in building a website?
+                            <i class="fa-solid fa-plus icon"></i>
+                            <i class="fa-solid fa-minus icon"></i>
+                            </button>
+                        </h3>
+                    </header>
+                    <article class="aContent">
+                        <div class="aInner">
+                            <p>It depends how big it is your project. After our first meeting, FIB Studio can tell you how much time.</p>
+                        </div>
+                    </article>
+                </div>
+
+            </section>    
+        </section>
+        
+        <!-- ************************************************************************************************************************** -->
+        <footer>
+            <a href="#pageTop" class="top"><i class="fa-solid fa-angles-up"></i></a>   
+            <ul class="socialMedia">
+                <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+            </ul>             
+        </footer>
+
+        <script src="scripts/jquery-3.6.3.min.js"></script>
+        <script src="scripts/script.js"></script>
+    </body>
+</html>

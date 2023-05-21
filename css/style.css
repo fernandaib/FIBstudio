@@ -1,0 +1,944 @@
+
+
+/* ------Global Variables------ */
+:root{
+    /* Fonts */
+    --heroTitle:'Anton', sans-serif;
+    --title: 'Oswald', sans-serif;
+    --content: 'Mallanna', sans-serif;
+
+    /* Colors */
+    --heroBg-color: #780840;
+    --slidesBg-color:#024D4D;
+    --text-color: #ffd60a;
+    --mark-color: #000;
+    --accent-color:#3BD5CB;
+}
+
+html{
+    font-family: var(--content);   
+    scroll-behavior: smooth;
+    background-color: var(--slidesBg-color);
+}
+
+body > * {
+    height: 100vh;
+    padding: 1rem 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ==================== DESKTOP SCREEN min 1200 ==================== */
+
+/* --------------- NAV & FOOTER SECTION (start)--------------- */
+
+.navigation, footer{        
+    height: auto;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    z-index: 100;    
+}
+
+.toggle-btn{
+    display: none;
+}
+
+.brand{
+    display: none;
+}
+
+.logo{    
+    width: clamp(3rem, 5vw, 4rem);  
+    height: auto;        
+    margin-right: auto;
+    margin-bottom: 0;   
+}
+
+nav ul{    
+    font-size: clamp(1.2rem, 2vw, 2rem);  
+    display: flex; 
+    gap: 1.5rem;
+}
+
+nav a, footer a, .open a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.fancy-link::after{
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: var(--accent-color);
+    display: block; 
+    transition: .5s ease-in-out;
+}
+
+.fancy-link:hover::after{
+    content: "";
+    height: 3px;
+    width: 100%;
+    background-color: var(--accent-color);
+    display: block;
+}
+
+/*Arrow home page*/
+footer a:hover{    
+    color: var(--heroBg-color);
+    text-shadow: 2px 2px 0 var(--text-color);      
+}
+
+.top{
+    position: fixed;
+    bottom: 20px;
+    right: 10%;
+    display: block;    
+    font-size: 3em;
+    animation: point 1s  cubic-bezier(0.18, .76, .37, 1.31);
+}
+
+@keyframes point{
+    0% {
+        transform: translateY(3rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* --------------- FOOTER SOCIAL MEDIA (start)--------------- */
+
+.socialMedia{
+    position: fixed;
+    display: flex;    
+    bottom: 20px;
+    right: 20%;
+    font-size: clamp(1rem, 3vw, 2rem); 
+    gap: 1.5rem;   
+}
+
+.socialMedia a{
+    color: var(--accent-color);
+}
+
+/* --------------- HERO SECTION (start)--------------- */
+header{
+    background-color: var(--heroBg-color);
+    font-family: var(--heroTitle);
+    font-size: clamp(2rem, 10vw, 6rem);
+    color: var(--accent-color);
+    text-transform: uppercase;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.angled{
+    background-color: var(--text-color);
+    color: var(--mark-color);
+    transform: rotate(-3deg);
+    padding: 0.125em;
+    border-radius: 5px;
+
+    animation-name: vanish;
+    animation-duration: 3s;
+}
+
+@keyframes vanish {
+    from {background-color: transparent;}
+    to {background-color: var(--accent-color);}
+  }
+
+.flat{
+    transform: rotate(3deg);
+}
+
+.hero li{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2%;
+}
+
+/*^^^^^^^^^^^^^^^^^HeroTitle Animation^^^^^^^^^^^^^^^^^*/
+
+.slideLeft {
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 100%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+/*Call Action - Button (display Form)*/
+.open {
+    background-color: var(--text-color); 
+    color: var(--heroBg-color);   
+    font-size: clamp(1rem, 7vw, 3rem);    
+    padding: 0.5rem 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    text-shadow: 2px 2px 0 var(--accent-color); 
+    margin-top: 1em;
+    cursor: pointer;
+
+    transition: all 1s;   
+}
+
+.open:hover{
+    background-color:var(--accent-color);  
+    box-shadow: 5px 5px 0 var(--text-color) ;
+}
+
+/*Form CSS code is founded in Secton #4*/
+
+/* --------------- SECTION #1 (about us)--------------- */
+#section1, #section2{
+
+    color: var(--text-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10%;
+}
+
+#section1 .angled{
+    padding: 1em;
+    font-size:  clamp(1rem, 3vw, 2rem);    
+    box-shadow: 15px 15px var(--accent-color);
+}
+
+h2, .keyWord{
+    font-family: var(--title);
+    color: var(--heroBg-color);
+    margin-bottom: 1em;
+}
+
+@keyframes moveBG{
+    to{background-position: var(--bgSize) 0;}
+}
+#section1 .material-icons{
+    font-size:  clamp(4rem, 10vw, 16rem);   
+
+    --bgSize: 150%;
+    background: linear-gradient(
+                45deg,
+                var(--accent-color),  var(--text-color)          
+    )
+                0 0 / var(--bgSize) 100%;
+    animation: moveBG 5s infinite linear;   
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/*^^^^^^^^^^^^^^^^^Paragraph Animation^^^^^^^^^^^^^^^^^*/
+#section2 p,
+#section1 p {
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 100%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+
+
+/* --------------- SECTION #2 (services)--------------- */
+
+#section2 .angled{
+    padding: 1em;
+    font-size: clamp(1rem, 3vw, 2rem);    
+    box-shadow: 15px 15px var(--accent-color);
+}
+
+#section2 dl{
+    font-size: clamp(1rem, 3vw, 2rem);     
+}
+
+#section2 dt{    
+    margin-bottom: 2%;
+}
+
+dt .fa-solid{
+    margin-right: 1rem;
+}
+
+
+#section2 dd{    
+    margin-bottom: 5%;
+}
+
+.angledWord{
+    transform: rotate(-3deg);
+    padding: 3%;
+    margin-right: auto;
+    background-color: var(--text-color);
+    color: var(--heroBg-color);
+    font-family: var(--title);
+    border-radius: 3px;
+}
+
+#section2 li {
+    
+    font-size: clamp(0.5rem, 2vw, 1.5rem); 
+    color: #024D4D;
+    margin-bottom: .2rem;     
+    margin-left: 1px;
+}
+
+#section2 ul{    
+    list-style-position:inside;
+    list-style: disc;
+    margin-left: 1.2rem;
+    
+}
+
+/* --------------- SECTION #3 (projects)---------------------------- */
+#section3{
+
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+
+#section3 .angled{    
+    font-size: clamp(1rem, 3vw, 2rem);    
+    box-shadow: 15px 15px var(--accent-color);
+    margin-right: auto;
+}
+
+#section3 .flat{
+    margin: 0.25em;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~section #3-CAROUSEL~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.carousel {
+    width: 80%;
+    max-width: 350px;
+    height: 350px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carouselContainer {
+    background-color: var(--text-color);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 12px;   
+}
+
+.carouselItems {
+    list-style-type: none;
+    height: 100%;
+    position: relative;
+    transition: transform .25s ease-in;
+}
+
+.carouselSlide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+
+    color: var(--heroBg-color);
+    border-radius: 12px;
+}
+
+.carouselBtn {
+    background-color: transparent;
+    border: none;
+    color: var(--accent-color);
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    text-shadow: none;
+}
+
+.carouselBtn.leftBtn { left: -60px; }
+.carouselBtn.rightBtn { right: -60px; }
+
+.carouselNav {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+    position: relative;
+    bottom: 0;
+}
+
+.carouselIndicator {
+    background-color: var(--accent-color);
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.carouselIndicator.currentSlide {
+    background-color: var(--heroBg-color);
+    border: solid 3px var(--text-color);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.isHidden {
+    display: none;
+}
+
+ul.carouselItems{
+    font-family: var(--title);
+}
+
+ul.carouselItems h2{
+    font-size: clamp(1rem, 3vw, 2rem);    
+}
+
+ul.carouselItems a::after{
+    content: '\f101';
+    display: inline-block;
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    
+    padding: 2px 0 0 5px;
+}
+
+ul.carouselItems a:link{
+    text-decoration: none;
+    color: var(--heroBg-color);
+}
+ul.carouselItems a:visited{
+    
+    color: var(--heroBg-color);
+}
+ul.carouselItems a:hover{    
+    color: var(--accent-color);
+}
+ul.carouselItems a:active{    
+    color: var(--mark-color);
+}
+
+/* --------------- SECTION #4 (get in touch)---------------------------- */
+
+#section4{
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;   
+}
+
+#section4 .angled{    
+    font-size:  clamp(1rem, 3vw, 2rem);    
+    box-shadow: 15px 15px var(--accent-color);
+    margin-right: auto;
+}
+
+#section4 .flat{
+    margin: 0.25em;
+}
+/*~~~~~~~~~~~~~~~Get in Touch Form Modal Window~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.close {   
+    background-color: var(--slidesBg-color);    
+    color: var(--text-color);    
+    font-size: 1.5rem;
+    position: absolute;    
+    right: 40px;
+    top: 60px;
+    cursor: pointer;
+    
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+/*  modal window */
+.modalOverlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    background-color: var(--slidesBg-color);
+    padding: 1rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: opacity .5s ease-out, z-index 0s 1s linear;    
+}
+
+.isOpen{
+    transition-delay: .5s;    
+}
+
+.modal {
+    display: grid;
+    place-items: center;
+    position: relative;
+    background-color: var(--slidesBg-color);
+    /* background-color: blue; */
+    border-radius: 8px;
+    
+    color: var(--text-color);
+    min-width: 50vmin;
+    min-height: 50vmin;
+    padding: 1rem;
+    text-align: left;
+}
+
+.isOpen {
+    opacity: 1;
+    z-index: 1;
+}
+
+.isClosed {
+    opacity: 0;
+    z-index: -1;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~FORM (get in touch)~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#contact fieldset {
+    margin: 1em;
+    padding: 1em 2em;
+    border: solid 2px var(--text-color);
+    box-shadow: 15px 15px var(--accent-color);
+    border-radius: 6px;    
+    max-width: 550px; 
+}
+
+#contact legend {
+    font-size: clamp(.8em, 2vh, 2.5em);
+    padding: 0 .25em;
+    /* color: var(--heroBg-color);
+    background-color: var(--text-color); */
+    position: relative;
+    top: -11px;
+    left: -4px;
+}
+
+#contact label {
+    display: block;
+    margin-top: 1em;
+}
+
+#contact .checks label, #contact .radioBtns label {
+    margin-top: 0;
+}
+
+#contact input, #contact textarea {
+    padding: .5em;
+    border: solid 1px var(--slidesBg-color);
+    border-radius: 4px;
+}
+
+#contact textarea {
+    min-height: 8em;
+    width: calc(100% - 4em); 
+}
+
+#contact input[type="email"], #contact input[type="text"] {
+    width: 15em;
+}
+
+#contact .radioBtns p {
+    margin-top: 1em;
+}
+
+#contact input[type="checkbox"] + label {
+    display: inline-block;
+    margin-top: 0;
+}
+
+#btnSend{    
+    border-radius: 6px;
+    background-color: var(--text-color);
+    color: var(--slidesBg-color);
+    /* border: none; */
+    border: solid 2px var(--accent-color);
+    font-size: .9em;
+    margin-top: 1em;    
+    font-weight: 800;
+    display: inline-block;
+    
+}
+
+#contact input[type="submit"] {
+    padding: .5em 1em;  
+    background-color: transparent;
+    color: var(--slidesBg-color);
+    border: none;
+    font-size: .9em;   
+    font-weight: 800;   
+    cursor: pointer;   
+}
+
+.btnIcon{
+    padding-right: 1em;       
+}
+
+input:focus, textarea:focus {
+    outline: solid 1px var(--text-color);
+    border: solid 1px var(--text-color);
+    box-shadow: 0 0 3px var(--text-color);
+}
+
+#contact .checks {
+    margin-top: .5em;
+}
+
+#contact .checks label {
+    display: inline-block;
+}
+
+.checks span::before {
+    display: inline-block;
+    font-family: "Font Awesome 6 Free";
+    font-size: 1.5em;
+    content: "\f0c8";
+    color: var(--text-color);
+    vertical-align: middle;
+    margin-top: -3px;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-top: 1px;
+    margin-left: -1px;
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked ~ span::before {
+    content: "\f14a";
+}
+
+#contact .radioBtns label {
+    display: inline-block;
+    margin-right: .5em;
+    padding-top: .75em;
+}
+
+.radioBtns span::before {
+    display: inline-block;
+    font-family: "Font Awesome 6 Free";
+    font-size: 1.5em;
+    content: "\f111";
+    color: var(--text-color);
+    vertical-align: middle;
+    margin-top: -3px;
+}
+
+input[type="radio"] {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-top: -1px;
+    margin-left: 2px;
+    opacity: 0;
+}
+
+input[type="radio"]:checked ~ span::before {
+    content: "\f192";
+}
+
+.explanation a:link{    
+    text-decoration: none;
+    color: var(--accent-color);
+}
+.explanation a:visited{    
+    color: var(--accent-color);
+}
+
+.explanation a:hover{    
+    color: var(--accent-color);
+}
+.explanation a:active{    
+    color: var(--accent-color);
+}
+
+/* --------------- SECTION #5: FAQ --------------------------- */
+#section5{
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5%; 
+}
+
+#section5 .angled{    
+    font-size:  clamp(1rem, 3vw, 2rem);    
+    box-shadow: 15px 15px var(--accent-color);
+    margin-right: auto;
+}
+
+#section5 .flat{
+    margin: 0.25em;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~ACORDION (faq)~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.aContainer {
+    max-width: 50em;    
+    background-color: #FFF;
+}
+.accordion {
+    position: relative;
+}
+
+.aHeader{
+    all: unset;
+}
+
+.aHeader button {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;    
+    padding: 1rem 1rem;
+    border: 0;
+    border-top: solid 3px var(--slidesBg-color);
+    text-align: left;
+    font-size:  clamp(1rem, 1.5vw, 2rem);        
+    font-family: var(--title);
+    background-color: var(--text-color);
+    color: var(--heroBg-color);
+}
+
+.fa-plus, .fa-minus {
+    width: 1rem;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+.fa-plus {
+    display: block;
+}
+.fa-minus {
+    display: none;
+}
+.accordion.isOpen .fa-minus {
+    display: block;
+}
+.accordion.isOpen .fa-plus {
+    display: none;
+}
+.aContent {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-out;
+}
+
+.aInner {
+    /*shades*/
+    --primary-color: hsl(50, 100%, 52%);
+    --color: 50, 100%;
+    --l: 52%;
+    --main-color-lighter: hsl(var(--color), calc( var(--l) + 30% ));
+    
+    padding: 1rem 1rem;
+    background-color: var(--main-color-lighter);
+    color: var(--slidesBg-color);
+    font-size:  clamp(1rem, 2vw, 2rem); 
+}
+
+/* ==================== TABLET - IPAD SCREEN ==================== */
+
+
+/* ==================== MOBILE SCREEN max 600px ==================== */
+@media screen and (max-width: 600px){
+
+    /* --------------- NAV & FOOTER SECTION (start)--------------- */ 
+    .toggle-btn{
+        display: inline-block;
+        background-color: var(--accent-color);
+        border-radius: 50%;
+        width: 3em;
+        height: 3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        box-shadow: 2px 2px 2px rgba(3,42,60,.8);
+
+        cursor: pointer;
+    }
+
+    nav{
+        all: unset;
+        display: none;            
+    }
+
+    nav ul{
+        all: unset;
+    }
+
+    nav li{
+        font-size:  clamp(2rem, 5vw, 3rem);        
+        margin-bottom: 10%;         
+        font-family: var(--title);
+    }
+    
+    nav a{
+        color: var(--mark-color);
+        font-weight: 800;      
+    }      
+
+    nav.show{
+        background-color: var(--text-color);
+        color: var(--mark-color);
+        display: block;
+        height: 100vh; 
+        
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        margin-left: -10%;
+        text-align: center;      
+    }   
+
+    .brand{
+        all: unset;
+        width: 15%;
+        height: auto;        
+    }      
+
+    .fa-bars, .fa-xmark {
+        color: var(--text-color);
+        font-weight: 900;
+        font-size: 1.5rem;         
+        text-shadow: 2px 2px 2px rgba(7, 138, 198, 0.8);
+    }
+
+     .fa-bars {
+        display: block;
+    }
+    .fa-xmark {
+        display: none;
+    }
+
+    /* Java Script */
+    .switchOn{
+        display: block;
+    }
+    .switchOff{
+        display: none;
+    }     
+    .menuMobileStyle{
+        background-color: var(--text-color);     
+        border-bottom: solid 1px var(--text-color);   
+    }
+    
+    /* --------------- FOOTER (generic)--------------- */
+    footer{
+        all: unset;        
+        display: flex;
+        justify-content: center;
+    }  
+
+    /* --------------- FOOTER SOCIAL MEDIA --------------- */
+
+    .socialMedia{
+        all: unset;
+        display: flex;        
+        position: fixed;
+        bottom: 20px;       
+        font-size: clamp(1rem, 3vw, 2rem);      
+        list-style-type: none;  
+        gap: 0.5em;
+    }
+
+    .socialMedia a:hover{    
+        color: var(--text-color);
+        text-shadow: none;      
+    }
+
+    /*--------------- TITLES and CONTAINER sections ---------------*/
+    #section1 .angled,
+    #section2 .angled,
+    #section3 .angled,
+    #section4 .angled,
+    #section5 .angled {          
+        box-shadow: 5px 5px var(--accent-color);
+    }
+
+    /*--------------- FORM get in touch ---------------*/
+
+    #contact fieldset {
+        margin: 3em;
+        padding: 0.5em 0.5em;
+        box-shadow: 5px 5px var(--accent-color);
+    }
+
+    textarea {
+        min-height: 3em;
+        width: calc(100% - 1em); 
+    }
+
+    .close {    
+        font-size: 2rem;
+        right: 45px;
+        top: 65px;
+    }
+
+}
+
+
